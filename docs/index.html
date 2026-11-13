@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SandwichCreator — от контура к раскладке</title>
+  <meta name="description" content="Раскладка сэндвич-панелей и фасонок в Archicad. Профили 1190 и 1000, выбор толщины и RAL, учёт проёмов и проверка результата через Tapir.">
+  <link rel="alternate" hreflang="ru" href="index.html"><link rel="alternate" hreflang="en" href="en/index.html">
+  <link rel="icon" href="assets/logo.png"><link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="SandwichCreator — в начало"><img src="assets/logo.png" width="42" height="42" alt=""><span>SandwichCreator</span></a>
+    <nav aria-label="Основная навигация"><a href="#features">Возможности</a><a href="#interface">Интерфейс</a><a href="#start">Как начать</a></nav>
+    <div class="header-actions"><div class="language-switch" role="group" aria-label="Язык сайта"><a href="index.html" lang="ru" hreflang="ru" aria-current="page" aria-label="Русский">RU</a><a href="en/index.html" lang="en" hreflang="en" aria-label="English">EN</a></div><a class="button small secondary header-download" href="#download">Скачать приложение <span aria-hidden="true">↗</span></a></div>
+  </header>
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> Для Archicad · через Tapir</div>
+        <h1>От контура —<br>к готовой<br><span>раскладке.</span></h1>
+        <p class="hero-text">Сэндвич-панели, фасонки, цвет и типоразмеры.<br class="desktop-break"> Соберите фасад по вашим правилам<br class="desktop-break"> в одном Windows-приложении.</p>
+        <div class="hero-actions"><a class="button primary" href="#download">Попробовать SandwichCreator <span aria-hidden="true">↗</span></a><a class="text-link" href="#interface">Посмотреть интерфейс <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-details"><span>Windows x64</span><span>Версия 1.6.3</span><span>Python уже внутри</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Интерактивная иллюстрация фасада">
+        <div class="visual-top"><span><i class="mini-square"></i> Ваш следующий фасад</span><span class="visual-badge">Эскиз 01</span></div>
+        <div class="drawing">
+          <svg viewBox="0 0 600 420" role="img" aria-labelledby="facade-title"><title id="facade-title">Схематичный фасад здания из сэндвич-панелей</title>
+            <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#e8e6ee" stroke-width=".65"/></pattern><clipPath id="front"><path d="M75 175 360 112 360 322 75 385Z"/></clipPath><clipPath id="side"><path d="M360 112 521 192 521 400 360 322Z"/></clipPath></defs>
+            <rect width="600" height="420" fill="url(#grid)"/>
+            <path d="M55 390 360 325 546 414 241 479Z" fill="#dfdce8" opacity=".55"/>
+            <path d="M75 175 360 112 521 192 231 257Z" fill="#f7f5fb" stroke="#c5bed5" stroke-width="1.5"/>
+            <path class="front-fill" d="M75 175 360 112 360 322 75 385Z" fill="var(--facade-color)"/>
+            <path class="side-fill" d="M360 112 521 192 521 400 360 322Z" fill="var(--facade-color)"/><path d="M360 112 521 192 521 400 360 322Z" fill="#252034" opacity=".12"/>
+            <g id="panel-lines-front" clip-path="url(#front)" stroke="white" stroke-opacity=".65" stroke-width="1.3"></g>
+            <g id="panel-lines-side" clip-path="url(#side)" stroke="white" stroke-opacity=".5" stroke-width="1.3"></g>
+            <g fill="none" stroke="#e1d9f0" stroke-width="5" stroke-linejoin="round"><path d="M75 175V385M360 112V322M521 192V400"/><path d="M216 144V354" stroke-width="3"/><path d="M441 152V361" stroke-width="3"/></g>
+            <path d="M107 253 185 236 185 286 107 303Z" fill="#eaf2f1" stroke="#e5dfef" stroke-width="4"/><path d="M146 244V295" stroke="#b5b8c5" stroke-width="2"/>
+            <path d="M268 272 321 260 321 331 268 343Z" fill="#f8f6fc" stroke="#e5dfef" stroke-width="4"/><path d="M309 298V309" stroke="#aaa1bb" stroke-width="3"/>
+            <g stroke="#b9b1ca" stroke-width="1" fill="none"><path d="M75 397V412M360 333V348M75 405 360 342"/><path d="M70 402 80 408M355 339 365 345"/></g>
+            <g fill="#8d849d" font-family="Segoe UI, sans-serif" font-size="11"><text x="177" y="403" transform="rotate(-12 177 403)">Панели + фасонки</text><text x="65" y="104">01 / МОДУЛЬНЫЙ ФАСАД</text></g>
+          </svg>
+          <div class="drawing-note"><span class="status-dot"></span> Панели по высоте <b id="profile-note">1190 мм</b></div>
+        </div>
+        <div class="visual-controls"><div><span class="control-label">Попробуйте цвет</span><div class="swatches" role="group" aria-label="Цвет иллюстрации"><button class="swatch selected" data-color="#005387" data-ral="5005" style="--swatch:#005387" aria-label="RAL 5005, сигнальный синий" aria-pressed="true"></button><button class="swatch" data-color="#861A22" data-ral="3003" style="--swatch:#861A22" aria-label="RAL 3003, рубиново-красный" aria-pressed="false"></button><button class="swatch" data-color="#114232" data-ral="6005" style="--swatch:#114232" aria-label="RAL 6005, зелёный мох" aria-pressed="false"></button><button class="swatch" data-color="#9B9B9B" data-ral="7004" style="--swatch:#9B9B9B" aria-label="RAL 7004, сигнальный серый" aria-pressed="false"></button><button class="swatch" data-color="#ECECE7" data-ral="9003" style="--swatch:#ECECE7" aria-label="RAL 9003, сигнальный белый" aria-pressed="false"></button></div></div><div class="profile-control"><span class="control-label" id="profile-label">Профиль</span><div class="segmented" role="group" aria-labelledby="profile-label"><button data-profile="1190" class="selected" aria-pressed="true">1190</button><button data-profile="1000" aria-pressed="false">1000</button></div></div></div>
+        <div class="visual-caption"><span id="ral-note" aria-live="polite">RAL 5005</span><span>Иллюстрация · расчёт выполняется в приложении</span></div>
+      </div>
+    </section>
+    <section class="workflow container" aria-label="Три шага работы">
+      <div><span class="step-number">01</span><div><h3>Выберите стены</h3><p>По ID или выделению в Archicad</p></div></div><div><span class="step-number">02</span><div><h3>Задайте параметры</h3><p>Профиль, толщина, RAL и швы</p></div></div><div><span class="step-number">03</span><div><h3>Получите раскладку</h3><p>С проверкой геометрии и свойств</p></div></div>
+    </section>
+    <section class="features container section" id="features">
+      <div class="section-heading"><div><p class="eyebrow">Продумано до стыка</p><h2>Каждая панель —<br>на своём месте.</h2></div><p class="section-description">От простого участка стены до открытого контура и Т-образного соединения. Настройте правила один раз — приложение применит их ко всей раскладке.</p></div>
+      <div class="feature-grid">
+        <article class="feature"><div class="feature-art layers" aria-hidden="true"><i></i><i></i><i></i><span>1190 / 1000</span></div><h3>Две высоты. Ваш приоритет.</h3><p>Используйте максимум основного профиля, а остаток доберите вторым. Высота раскладки подстраивается под полные ряды.</p></article>
+        <article class="feature"><div class="feature-art dimension" aria-hidden="true"><span>50</span><div></div><span>200 мм</span></div><h3>Толщина и цвет под проект.</h3><p>Семь толщин от 50 до 200 мм. Выберите наружный RAL из списка или введите номер. Внутри — RAL 9003, фасонки — в цвет фасада.</p></article>
+        <article class="feature"><div class="feature-art opening" aria-hidden="true"><i></i><span></span></div><h3>Проёмы учитываются.</h3><p>У проёмов появляются отдельные короткие панели. Фасонки разделяются на части, чтобы не пересекать окна и двери.</p></article>
+      </div>
+      <div class="detail-rows"><div><span class="detail-symbol" aria-hidden="true">↔</span><h3>Контур закреплён</h3><p>Исходные линии не смещаются. Шов по длине задаётся диапазоном; по умолчанию — 10–25 мм.</p></div><div><span class="detail-symbol" aria-hidden="true">≡</span><h3>Типоразмеры под контролем</h3><p>Длины кратны сантиметру. Одинаковые длины и профили получают одинаковый ID; после ручных правок ID можно переназначить.</p></div><div><span class="detail-symbol" aria-hidden="true">✓</span><h3>Данные остаются в модели</h3><p>Наружный и внутренний цвет, высота и толщина профиля записываются в пользовательские свойства панелей.</p></div></div>
+    </section>
+    <section class="interface-section section" id="interface"><div class="container"><div class="section-heading"><div><p class="eyebrow">Знакомый проект. Спокойный интерфейс.</p><h2>Сложная геометрия.<br>Понятные настройки.</h2></div><p class="section-description">Все параметры собраны по смыслу.<br>Светлая палитра помогает сосредоточиться на проекте.</p></div>
+      <div class="screen-tabs" role="tablist" aria-label="Разделы интерфейса"><button id="tab-source" role="tab" aria-selected="true" aria-controls="screen-panel" data-screen="source" class="selected">01&nbsp; Источник</button><button id="tab-profiles" role="tab" aria-selected="false" aria-controls="screen-panel" data-screen="profiles" tabindex="-1">02&nbsp; Профили</button><button id="tab-colors" role="tab" aria-selected="false" aria-controls="screen-panel" data-screen="colors" tabindex="-1">03&nbsp; Цвет</button><button id="tab-rules" role="tab" aria-selected="false" aria-controls="screen-panel" data-screen="rules" tabindex="-1">04&nbsp; Правила</button></div>
+      <div class="screen-stage" id="screen-panel" role="tabpanel" aria-labelledby="tab-source"><div class="screen-window"><div class="window-bar"><span><i></i><i></i><i></i></span><span>SandwichCreator / Windows</span><span aria-hidden="true">↗</span></div><img id="interface-image" src="assets/interface-source.png" width="1420" height="920" alt="Интерфейс SandwichCreator: выбор исходных стен по ID или выделению" loading="lazy"></div></div>
+      <p class="screen-caption" id="screen-caption">Укажите ID исходных стен или используйте текущее выделение в Archicad.</p>
+    </div></section>
+    <section class="start section container" id="start"><div><p class="eyebrow">Несколько шагов до первого фасада</p><h2>Начните<br>со своего проекта.</h2><p class="start-note">Профили панелей и фасонок уже встроены в EXE. Образцы элементов в исходном файле не нужны.</p></div><ol class="start-list"><li><span>1</span><div><h3>Откройте Archicad с Tapir</h3><p>Запустите проект и убедитесь, что дополнение Tapir доступно.</p></div></li><li><span>2</span><div><h3>Запустите SandwichCreator</h3><p>Подключитесь к Archicad и прочитайте исходные стены. Отдельная установка Python не требуется.</p></div></li><li><span>3</span><div><h3>Проверьте и создайте раскладку</h3><p>Выберите параметры, посмотрите предварительный план и типоразмеры, затем создайте элементы в Archicad.</p></div></li></ol></section>
+    <section class="container download-section" id="download"><div class="download-card"><div class="download-icon" aria-hidden="true"><img src="assets/logo.png" width="88" height="88" alt=""></div><div class="download-copy"><p class="eyebrow">Меньше рутины. Больше проекта.</p><h2>Соберите свой фасад.</h2><p>SandwichCreator 1.6.3 · Windows x64</p></div><div class="download-action"><a class="button primary" href="downloads/SandwichCreator-1.6.3.exe" download>Скачать приложение <span aria-hidden="true">↓</span></a><span>EXE · 12,8 МБ · Python включён</span></div></div><p class="download-requirements">Для работы нужны Archicad и дополнение Tapir на том же компьютере. Для проёмов — соответствующая библиотека Archicad.</p></section>
+    <section class="faq container section"><div><p class="eyebrow">Пара уточнений</p><h2>Перед началом.</h2></div><div class="faq-list"><details><summary>С какими версиями Archicad работает приложение?<span aria-hidden="true">+</span></summary><p>Сборка проверена с Archicad 27 и Tapir 1.7.3. Совместимость с другими версиями нужно проверять отдельно.</p></details><details><summary>Можно ли выбрать свой RAL?<span aria-hidden="true">+</span></summary><p>Да. В приложении есть 15 предложенных цветов и ручной ввод номера из встроенного справочника RAL Classic. Экранный образец цвета приблизительный.</p></details><details><summary>Можно ли продолжить после ручных правок?<span aria-hidden="true">+</span></summary><p>Кнопка «Переназначить ID панелей» повторно проверяет текущие профили и 3D-длины, округляет длины до сантиметров и группирует одинаковые панели.</p></details><details><summary>С чего лучше начать проверку?<span aria-hidden="true">+</span></summary><p>Сохраните исходный проект и попробуйте небольшой контур. Перед созданием посмотрите предварительный план, новые высоты и таблицу типоразмеров. Удаление исходных стен можно отключить в приложении.</p></details></div></section>
+  </main>
+  <footer class="footer container"><a class="brand" href="#home"><img src="assets/logo.png" width="30" height="30" alt=""><span>SandwichCreator</span></a><span>Раскладка, в которой всё на месте.</span><span class="draft-label"><i></i> Черновая версия</span></footer>
+</body>
+</html>
