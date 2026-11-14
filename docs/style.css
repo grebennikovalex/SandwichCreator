@@ -11,6 +11,7 @@
 @media(max-width:360px){.header{padding-inline:18px}.header .brand{font-size:16px;gap:5px}.header .brand img{width:29px;height:29px}.language-switch{padding:3px}.language-switch a{font-size:12px;padding:9px 6px}}
 
 /* Locally embedded Lucide SVGs stay crisp and require no runtime library. */
+.setup-note{margin-top:18px;font-size:16px;line-height:1.65;color:var(--muted)}.setup-note a{color:var(--purple-dark);text-decoration:underline;text-underline-offset:3px;font-weight:600}.setup-note a:hover{color:var(--purple)}
 .lucide{width:18px;height:18px;flex-shrink:0;vertical-align:middle;stroke-width:1.75}
 .detail-symbol{display:flex;align-items:center}.detail-symbol .lucide{width:24px;height:24px}
 summary .lucide{width:20px;height:20px;color:#a091b6;transition:transform .2s}
