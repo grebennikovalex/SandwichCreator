@@ -5,12 +5,10 @@ const assetBase=isEnglish?'../assets/':'assets/';
 function panelLines(profile){
   const count=profile==='1000'?9:7;
   const front=document.querySelector('#panel-lines-front');
-  const side=document.querySelector('#panel-lines-side');
-  front.replaceChildren();side.replaceChildren();
+  front.replaceChildren();
   for(let i=1;i<count;i++){
-    const y=175+210*i/count;
-    const a=document.createElementNS(NS,'path');a.setAttribute('d',`M75 ${y}L360 ${y-63}`);front.append(a);
-    const b=document.createElementNS(NS,'path');b.setAttribute('d',`M360 ${y-63}L521 ${y+17}`);side.append(b);
+    const y=95+280*i/count;
+    const a=document.createElementNS(NS,'path');a.setAttribute('d',`M70 ${y}H530`);front.append(a);
   }
 }
 panelLines('1190');

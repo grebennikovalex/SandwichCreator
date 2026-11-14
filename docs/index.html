@@ -69,17 +69,14 @@
       <div class="hero-visual" aria-label="Интерактивная иллюстрация фасада">
         <div class="drawing">
           <svg viewBox="0 0 600 420" role="img" aria-labelledby="facade-title"><title id="facade-title">Схематичный фасад здания из сэндвич-панелей</title>
-            <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#e8e6ee" stroke-width=".65"/></pattern><clipPath id="front"><path d="M75 175 360 112 360 322 75 385Z"/></clipPath><clipPath id="side"><path d="M360 112 521 192 521 400 360 322Z"/></clipPath></defs>
+            <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#e8e6ee" stroke-width=".65"/></pattern><clipPath id="front"><rect x="70" y="95" width="460" height="280"/></clipPath></defs>
             <rect width="600" height="420" fill="url(#grid)"/>
-            <path d="M55 390 360 325 546 414 241 479Z" fill="#dfdce8" opacity=".55"/>
-            <path d="M75 175 360 112 521 192 231 257Z" fill="#f7f5fb" stroke="#c5bed5" stroke-width="1.5"/>
-            <path class="front-fill" d="M75 175 360 112 360 322 75 385Z" fill="var(--facade-color)"/>
-            <path class="side-fill" d="M360 112 521 192 521 400 360 322Z" fill="var(--facade-color)"/><path d="M360 112 521 192 521 400 360 322Z" fill="#252034" opacity=".12"/>
+            <rect class="front-fill" x="70" y="95" width="460" height="280" fill="var(--facade-color)"/>
             <g id="panel-lines-front" clip-path="url(#front)" stroke="white" stroke-opacity=".65" stroke-width="1.3"></g>
-            <g id="panel-lines-side" clip-path="url(#side)" stroke="white" stroke-opacity=".5" stroke-width="1.3"></g>
-            <g fill="none" stroke="#e1d9f0" stroke-width="5" stroke-linejoin="round"><path d="M75 175V385M360 112V322M521 192V400"/><path d="M216 144V354" stroke-width="3"/><path d="M441 152V361" stroke-width="3"/></g>
-            <path d="M107 253 185 236 185 286 107 303Z" fill="#eaf2f1" stroke="#e5dfef" stroke-width="4"/><path d="M146 244V295" stroke="#b5b8c5" stroke-width="2"/>
-            <path d="M268 272 321 260 321 331 268 343Z" fill="#f8f6fc" stroke="#e5dfef" stroke-width="4"/><path d="M309 298V309" stroke="#aaa1bb" stroke-width="3"/>
+            <g fill="none" stroke="#e1d9f0"><rect x="70" y="95" width="460" height="280" stroke-width="5"/><path d="M300 95V375" stroke-width="3"/></g>
+            <rect x="120" y="220" width="125" height="75" fill="#eaf2f1" stroke="#e5dfef" stroke-width="4"/><path d="M182.5 220V295" stroke="#b5b8c5" stroke-width="2"/>
+            <rect x="390" y="270" width="85" height="105" fill="#f8f6fc" stroke="#e5dfef" stroke-width="4"/><path d="M461 314V328" stroke="#aaa1bb" stroke-width="3"/>
+            <path d="M54 379H546" fill="none" stroke="#ddd6e9" stroke-width="4"/>
           </svg>
           <div class="drawing-note"><span class="status-dot"></span> Панели по высоте <b id="profile-note">1190 мм</b></div>
         </div>
