@@ -27,3 +27,12 @@ summary .lucide{width:20px;height:20px;color:#a091b6;transition:transform .2s}
 @media(max-width:1000px){.header .brand{font-size:22px}.header nav{font-size:16px}}
 @media(max-width:700px){.header .brand{font-size:21px}.hero-copy>.eyebrow{font-size:15px}}
 @media(max-width:360px){.header .brand{font-size:19px}}
+
+/* Workflow and feature copy follow the approved second-screen layout. */
+.workflow h3{font-size:22px;margin-bottom:4px}.workflow p{font-size:16px;line-height:1.45}
+.features>.section-heading h2{max-width:900px}.features .feature p{font-size:16px;line-height:1.6}
+.developer-credit{display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--muted)}
+.developer-credit a{display:inline-flex;align-items:center;gap:7px;color:var(--purple-dark);width:fit-content}
+.developer-credit a:hover{text-decoration:underline;text-underline-offset:3px}.telegram-icon{color:#77a9c4;flex-shrink:0}
+@media(max-width:1000px){.workflow h3{font-size:20px}.workflow p{font-size:14px}.footer{flex-wrap:wrap}}
+@media(max-width:700px){.workflow h3{font-size:21px}.workflow p{font-size:15px}.developer-credit{flex-basis:100%;font-size:14px}}
