@@ -81,3 +81,7 @@ summary .lucide{width:20px;height:20px;color:#a091b6;transition:transform .2s}
 .download-copy .download-description{font-size:20px;line-height:1.45;color:var(--muted);margin-bottom:14px}
 @media(max-width:1000px) and (min-width:701px){.download-card{flex-wrap:wrap}.download-copy{min-width:0;flex-basis:calc(100% - 110px)}.download-action{margin-left:auto}}
 @media(max-width:700px){.download-copy .download-description{font-size:18px}}
+
+/* Separate the download card from the interface section above it. */
+.download-section{padding-top:64px}
+@media(max-width:700px){.download-section{padding-top:40px}}
