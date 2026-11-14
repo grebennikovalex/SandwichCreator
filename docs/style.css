@@ -58,6 +58,12 @@ summary .lucide{width:20px;height:20px;color:#a091b6;transition:transform .2s}
 .benefits .detail-rows>div{align-items:start}
 
 /* FAQ without a side heading; developer and contact share a footer line. */
-.faq{display:block}.faq-list{max-width:980px;margin-inline:auto}
+.faq{display:block}.faq-list{width:100%;max-width:none}
 .developer-credit{flex-direction:row;align-items:center;gap:16px;flex-wrap:wrap}
 @media(min-width:701px){.developer-credit{flex-wrap:nowrap}}
+
+/* Full-width FAQ with larger questions and answers. */
+.faq-list summary{font-size:22px;line-height:1.5;padding-block:26px}
+.faq-list details p{font-size:20px;line-height:1.65;padding-bottom:26px}
+.faq-list summary .lucide{width:24px;height:24px}
+@media(max-width:700px){.faq-list summary{font-size:20px;padding-block:22px}.faq-list details p{font-size:18px;padding-right:0;padding-bottom:22px}}
