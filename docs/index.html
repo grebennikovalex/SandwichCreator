@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SandwichCreator — от контура к раскладке</title>
-  <meta name="description" content="SandwichCreator — внешнее дополнение к Archicad для автоматической раскладки сэндвич-панелей и фасонок. Отдельное Windows-приложение, работающее через Tapir.">
+  <meta name="description" content="SandwichCreator — внешнее дополнение к Archicad для автоматической раскладки сэндвич-панелей и фасонных элементов. Отдельное Windows-приложение, работающее через Tapir.">
   <link rel="alternate" hreflang="ru" href="index.html"><link rel="alternate" hreflang="en" href="en/index.html">
   <link rel="icon" href="assets/logo.png"><link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
@@ -81,7 +81,7 @@
             <path d="M107 253 185 236 185 286 107 303Z" fill="#eaf2f1" stroke="#e5dfef" stroke-width="4"/><path d="M146 244V295" stroke="#b5b8c5" stroke-width="2"/>
             <path d="M268 272 321 260 321 331 268 343Z" fill="#f8f6fc" stroke="#e5dfef" stroke-width="4"/><path d="M309 298V309" stroke="#aaa1bb" stroke-width="3"/>
             <g stroke="#b9b1ca" stroke-width="1" fill="none"><path d="M75 397V412M360 333V348M75 405 360 342"/><path d="M70 402 80 408M355 339 365 345"/></g>
-            <g fill="#8d849d" font-family="Segoe UI, sans-serif" font-size="11"><text x="177" y="403" transform="rotate(-12 177 403)">Панели + фасонки</text><text x="65" y="104">01 / МОДУЛЬНЫЙ ФАСАД</text></g>
+            <g fill="#8d849d" font-family="Segoe UI, sans-serif" font-size="11"><text x="177" y="403" transform="rotate(-12 177 403)">Панели + фасонные элементы</text><text x="65" y="104">01 / МОДУЛЬНЫЙ ФАСАД</text></g>
           </svg>
           <div class="drawing-note"><span class="status-dot"></span> Панели по высоте <b id="profile-note">1190 мм</b></div>
         </div>
@@ -96,8 +96,8 @@
       <div class="section-heading"><div><p class="eyebrow">Продумано до стыка</p><h2>Каждая панель —<br>на своём месте.</h2></div><p class="section-description">От простого участка стены до открытого контура и Т-образного соединения. Настройте правила один раз — приложение применит их ко всей раскладке.</p></div>
       <div class="feature-grid">
         <article class="feature"><div class="feature-art layers" aria-hidden="true"><i></i><i></i><i></i><span>1190 / 1000</span></div><h3>Две высоты. Ваш приоритет.</h3><p>Используйте максимум основного профиля, а остаток доберите вторым. Высота раскладки подстраивается под полные ряды.</p></article>
-        <article class="feature"><div class="feature-art dimension" aria-hidden="true"><span>50</span><div></div><span>200 мм</span></div><h3>Толщина и цвет под проект.</h3><p>Семь толщин от 50 до 200 мм. Выберите наружный RAL из списка или введите номер. Внутри — RAL 9003, фасонки — в цвет фасада.</p></article>
-        <article class="feature"><div class="feature-art opening" aria-hidden="true"><i></i><span></span></div><h3>Проёмы учитываются.</h3><p>У проёмов появляются отдельные короткие панели. Фасонки разделяются на части, чтобы не пересекать окна и двери.</p></article>
+        <article class="feature"><div class="feature-art dimension" aria-hidden="true"><span>50</span><div></div><span>200 мм</span></div><h3>Толщина и цвет под проект.</h3><p>Семь толщин от 50 до 200 мм. Выберите наружный RAL из списка или введите номер. Внутри — RAL 9003, фасонные элементы — в цвет фасада.</p></article>
+        <article class="feature"><div class="feature-art opening" aria-hidden="true"><i></i><span></span></div><h3>Проёмы учитываются.</h3><p>У проёмов появляются отдельные короткие панели. Фасонные элементы разделяются на части, чтобы не пересекать окна и двери.</p></article>
       </div>
       <div class="detail-rows"><div><span class="detail-symbol"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-move-horizontal"
@@ -229,7 +229,7 @@
 </svg></div><img id="interface-image" src="assets/interface-source.png" width="1420" height="920" alt="Интерфейс SandwichCreator: выбор исходных стен по ID или выделению" loading="lazy"></div></div>
       <p class="screen-caption" id="screen-caption">Укажите ID исходных стен или используйте текущее выделение в Archicad.</p>
     </div></section>
-    <section class="start section container" id="start"><div><p class="eyebrow">Несколько шагов до первого фасада</p><h2>Начните<br>со своего проекта.</h2><p class="start-note">Профили панелей и фасонок уже встроены в EXE. Образцы элементов в исходном файле не нужны.</p></div><ol class="start-list"><li><span>1</span><div><h3>Откройте Archicad с Tapir</h3><p>Запустите проект и убедитесь, что дополнение Tapir доступно.</p></div></li><li><span>2</span><div><h3>Запустите SandwichCreator</h3><p>Подключитесь к Archicad и прочитайте исходные стены. Отдельная установка Python не требуется.</p></div></li><li><span>3</span><div><h3>Проверьте и создайте раскладку</h3><p>Выберите параметры, посмотрите предварительный план и типоразмеры, затем создайте элементы в Archicad.</p></div></li></ol></section>
+    <section class="start section container" id="start"><div><p class="eyebrow">Несколько шагов до первого фасада</p><h2>Начните<br>со своего проекта.</h2><p class="start-note">Профили панелей и фасонных элементов уже встроены в EXE. Образцы элементов в исходном файле не нужны.</p></div><ol class="start-list"><li><span>1</span><div><h3>Откройте Archicad с Tapir</h3><p>Запустите проект и убедитесь, что дополнение Tapir доступно.</p></div></li><li><span>2</span><div><h3>Запустите SandwichCreator</h3><p>Подключитесь к Archicad и прочитайте исходные стены. Отдельная установка Python не требуется.</p></div></li><li><span>3</span><div><h3>Проверьте и создайте раскладку</h3><p>Выберите параметры, посмотрите предварительный план и типоразмеры, затем создайте элементы в Archicad.</p></div></li></ol></section>
     <section class="container download-section" id="download"><div class="download-card"><div class="download-icon" aria-hidden="true"><img src="assets/logo.png" width="88" height="88" alt=""></div><div class="download-copy"><p class="eyebrow">Меньше рутины. Больше проекта.</p><h2>Соберите свой фасад.</h2><p>SandwichCreator 1.6.6 · Windows x64</p></div><div class="download-action"><a class="button primary" href="downloads/SandwichCreator-1.6.6.exe" download>Скачать приложение <svg aria-hidden="true" focusable="false"
   class="lucide lucide-download"
   xmlns="http://www.w3.org/2000/svg"

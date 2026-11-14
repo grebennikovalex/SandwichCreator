@@ -29,7 +29,7 @@ const screens=isEnglish?{
   profiles:['panel and flashing profile settings','Choose the preferred and secondary profiles, flashings and layout layer.'],
   colors:['panel thickness and exterior RAL color','Set the thickness and exterior RAL color. Flashings are colored to match automatically.'],
   rules:['layout rules, joints and height','Set the joint range, flashing spacing and height adjustment method.']
-}:{source:['выбор исходных стен по ID или выделению','Укажите ID исходных стен или используйте текущее выделение в Archicad.'],profiles:['настройка профилей панелей и фасонок','Выберите основной и доборный профиль, фасонки и слой для раскладки.'],colors:['выбор толщины и наружного цвета RAL','Задайте толщину и наружный RAL. Цвет фасонок подбирается автоматически.'],rules:['правила раскладки, швы и высота','Настройте диапазон швов, шаг фасонок и способ подгонки высоты.']};
+}:{source:['выбор исходных стен по ID или выделению','Укажите ID исходных стен или используйте текущее выделение в Archicad.'],profiles:['настройка профилей панелей и фасонных элементов','Выберите основной и доборный профиль, фасонные элементы и слой для раскладки.'],colors:['выбор толщины и наружного цвета RAL','Задайте толщину и наружный RAL. Цвет фасонных элементов подбирается автоматически.'],rules:['правила раскладки, швы и высота','Настройте диапазон швов, шаг фасонных элементов и способ подгонки высоты.']};
 const tabs=[...document.querySelectorAll('[data-screen]')];
 function selectScreen(tab){
   const key=tab.dataset.screen;
