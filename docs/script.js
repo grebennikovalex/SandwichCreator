@@ -1,6 +1,6 @@
 /* Illustration only: project geometry is calculated in the Windows application. */
 const NS='http://www.w3.org/2000/svg';
-const isEnglish=document.documentElement.lang==='en';
+const isEnglish=document.documentElement.lang.startsWith('en');
 const assetBase=isEnglish?'../assets/':'assets/';
 function panelLines(profile){
   const count=profile==='1000'?9:7;
@@ -27,7 +27,7 @@ document.querySelectorAll('[data-profile]').forEach(button=>button.addEventListe
 const screens=isEnglish?{
   source:['selecting source walls by ID or selection','Enter source wall IDs or use the current selection in Archicad.'],
   profiles:['panel and flashing profile settings','Choose the preferred and secondary profiles, flashings and layout layer.'],
-  colors:['panel thickness and exterior RAL colour','Set the thickness and exterior RAL colour. Flashings are coloured to match automatically.'],
+  colors:['panel thickness and exterior RAL color','Set the thickness and exterior RAL color. Flashings are colored to match automatically.'],
   rules:['layout rules, joints and height','Set the joint range, flashing spacing and height adjustment method.']
 }:{source:['выбор исходных стен по ID или выделению','Укажите ID исходных стен или используйте текущее выделение в Archicad.'],profiles:['настройка профилей панелей и фасонок','Выберите основной и доборный профиль, фасонки и слой для раскладки.'],colors:['выбор толщины и наружного цвета RAL','Задайте толщину и наружный RAL. Цвет фасонок подбирается автоматически.'],rules:['правила раскладки, швы и высота','Настройте диапазон швов, шаг фасонок и способ подгонки высоты.']};
 const tabs=[...document.querySelectorAll('[data-screen]')];
