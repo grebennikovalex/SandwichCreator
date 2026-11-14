@@ -30,11 +30,11 @@
   </header>
   <main>
     <section class="hero container" id="home">
+      <p class="hero-category">External add-on for Archicad</p>
       <div class="hero-copy">
-        <div class="eyebrow">External add-on for Archicad</div>
-        <h1>From wall outline<br>to finished<br><span>panel layout.</span></h1>
-        <p class="hero-text">SandwichCreator is an external add-on for Archicad that automatically lays out sandwich panels and flashings in a BIM model. It runs as a separate Windows application with Tapir installed.</p>
-        <p class="setup-note">No complex setup: no need to install Python or configure MCP or other tools. To connect to Archicad, all you need is <a href="https://github.com/ENZYME-APD/tapir-archicad-automation/releases/tag/2.0.0" target="_blank" rel="noopener noreferrer">Tapir 2.0.0</a>.</p>
+        <h1>Turns a wall outline<br class="desktop-break"> into sandwich panels<br class="desktop-break"> with your settings in just a few clicks</h1>
+        <p class="hero-text">SandwichCreator is an application that automatically lays out sandwich panels and flashings in Archicad.</p>
+        <p class="setup-note">Connecting to Archicad requires <a href="https://github.com/ENZYME-APD/tapir-archicad-automation/releases/tag/2.0.0" target="_blank" rel="noopener noreferrer">Tapir 2.0.0</a></p>
         <div class="hero-actions"><a class="button primary" href="#download">Try SandwichCreator <svg aria-hidden="true" focusable="false"
   class="lucide lucide-arrow-up-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,6 @@
         <div class="hero-details"><span>Windows x64</span><span>Version 1.6.6</span></div>
       </div>
       <div class="hero-visual" aria-label="Interactive facade illustration">
-        <div class="visual-top"><span class="visual-badge">Sketch 01</span></div>
         <div class="drawing">
           <svg viewBox="0 0 600 420" role="img" aria-labelledby="facade-title"><title id="facade-title">Schematic building facade made of sandwich panels</title>
             <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#e8e6ee" stroke-width=".65"/></pattern><clipPath id="front"><path d="M75 175 360 112 360 322 75 385Z"/></clipPath><clipPath id="side"><path d="M360 112 521 192 521 400 360 322Z"/></clipPath></defs>
@@ -81,12 +80,10 @@
             <g fill="none" stroke="#e1d9f0" stroke-width="5" stroke-linejoin="round"><path d="M75 175V385M360 112V322M521 192V400"/><path d="M216 144V354" stroke-width="3"/><path d="M441 152V361" stroke-width="3"/></g>
             <path d="M107 253 185 236 185 286 107 303Z" fill="#eaf2f1" stroke="#e5dfef" stroke-width="4"/><path d="M146 244V295" stroke="#b5b8c5" stroke-width="2"/>
             <path d="M268 272 321 260 321 331 268 343Z" fill="#f8f6fc" stroke="#e5dfef" stroke-width="4"/><path d="M309 298V309" stroke="#aaa1bb" stroke-width="3"/>
-            <g stroke="#b9b1ca" stroke-width="1" fill="none"><path d="M75 397V412M360 333V348M75 405 360 342"/><path d="M70 402 80 408M355 339 365 345"/></g>
-            <g fill="#8d849d" font-family="Segoe UI, sans-serif" font-size="11"><text x="177" y="403" transform="rotate(-12 177 403)">Panels + flashings</text><text x="65" y="104">01 / MODULAR FACADE</text></g>
           </svg>
           <div class="drawing-note"><span class="status-dot"></span> Panel height <b id="profile-note">1190 mm</b></div>
         </div>
-        <div class="visual-controls"><div><span class="control-label">Try a color</span><div class="swatches" role="group" aria-label="Illustration color"><button class="swatch selected" data-color="#005387" data-ral="5005" style="--swatch:#005387" aria-label="RAL 5005, signal blue" aria-pressed="true"></button><button class="swatch" data-color="#861A22" data-ral="3003" style="--swatch:#861A22" aria-label="RAL 3003, ruby red" aria-pressed="false"></button><button class="swatch" data-color="#114232" data-ral="6005" style="--swatch:#114232" aria-label="RAL 6005, moss green" aria-pressed="false"></button><button class="swatch" data-color="#9B9B9B" data-ral="7004" style="--swatch:#9B9B9B" aria-label="RAL 7004, signal gray" aria-pressed="false"></button><button class="swatch" data-color="#ECECE7" data-ral="9003" style="--swatch:#ECECE7" aria-label="RAL 9003, signal white" aria-pressed="false"></button></div></div><div class="profile-control"><span class="control-label" id="profile-label">Profile</span><div class="segmented" role="group" aria-labelledby="profile-label"><button data-profile="1190" class="selected" aria-pressed="true">1190</button><button data-profile="1000" aria-pressed="false">1000</button></div></div></div>
+        <div class="visual-controls"><div><span class="control-label">Choose a color</span><div class="swatches" role="group" aria-label="Illustration color"><button class="swatch selected" data-color="#005387" data-ral="5005" style="--swatch:#005387" aria-label="RAL 5005, signal blue" aria-pressed="true"></button><button class="swatch" data-color="#861A22" data-ral="3003" style="--swatch:#861A22" aria-label="RAL 3003, ruby red" aria-pressed="false"></button><button class="swatch" data-color="#114232" data-ral="6005" style="--swatch:#114232" aria-label="RAL 6005, moss green" aria-pressed="false"></button><button class="swatch" data-color="#9B9B9B" data-ral="7004" style="--swatch:#9B9B9B" aria-label="RAL 7004, signal gray" aria-pressed="false"></button><button class="swatch" data-color="#ECECE7" data-ral="9003" style="--swatch:#ECECE7" aria-label="RAL 9003, signal white" aria-pressed="false"></button></div></div><div class="profile-control"><span class="control-label" id="profile-label">Profile</span><div class="segmented" role="group" aria-labelledby="profile-label"><button data-profile="1190" class="selected" aria-pressed="true">1190</button><button data-profile="1000" aria-pressed="false">1000</button></div></div></div>
         <div class="visual-caption"><span id="ral-note" aria-live="polite">RAL 5005</span><span>Illustration · calculations run in the app</span></div>
       </div>
     </section>
