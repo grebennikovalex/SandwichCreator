@@ -6,6 +6,7 @@ Russian / English presentation website for SandwichCreator, a Windows applicatio
 - English: https://grebennikovalex.github.io/SandwichCreator/en/index.html
 - Static files: `docs/` (HTML, CSS, JavaScript, local assets and the Windows download).
 - GitHub Pages source: `main` branch, `/docs` directory. No build or external runtime dependencies.
+- Sitemap: https://grebennikovalex.github.io/SandwichCreator/sitemap.xml
 
 The Windows application source code and Archicad project files are not included. App screenshots currently show the Russian-language interface. This is a draft presentation site.
 
