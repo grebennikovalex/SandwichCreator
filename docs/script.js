@@ -23,11 +23,11 @@ document.querySelectorAll('[data-profile]').forEach(button=>button.addEventListe
   document.querySelector('#profile-note').textContent=`${button.dataset.profile} ${isEnglish?'mm':'мм'}`;
 }));
 const screens=isEnglish?{
-  source:['selecting source walls by ID or selection','Enter source wall IDs or use the current selection in Archicad.'],
-  profiles:['panel and flashing profile settings','Choose the preferred and secondary profiles, flashings and layout layer.'],
-  colors:['panel thickness and exterior RAL color','Set the thickness and exterior RAL color. Flashings are colored to match automatically.'],
-  rules:['layout parameters, joints and height','Set the joint range, flashing spacing and height adjustment method.']
-}:{source:['выбор исходных стен по ID или выделению','Укажите ID исходных стен или используйте текущее выделение в Archicad.'],profiles:['настройка профилей панелей и фасонных элементов','Выберите основной и доборный профиль, фасонные элементы и слой для раскладки.'],colors:['выбор толщины и наружного цвета RAL','Задайте толщину и наружный RAL. Цвет фасонных элементов подбирается автоматически.'],rules:['параметры раскладки, швы и высота','Настройте диапазон швов, шаг фасонных элементов и способ подгонки высоты.']};
+  source:['selecting source walls by ID or selection','Enter source wall IDs or use the current selection in Archicad'],
+  profiles:['panel and flashing profile settings','Choose the primary and secondary profiles, flashings, and the layer for placing them'],
+  colors:['panel thickness and exterior RAL color','Set the panel thickness and exterior color, including exterior flashings'],
+  rules:['layout parameters, joints and height','Set the range of vertical gaps between panels, flashing spacing, and the height adjustment method']
+}:{source:['выбор исходных стен по ID или выделению','Укажите ID исходных стен или используйте текущую выборку в Archicad'],profiles:['настройка профилей панелей и фасонных элементов','Выберите основной и доборный профиль, фасонные элементы и слой для их размещения'],colors:['выбор толщины и наружного цвета RAL','Задайте толщину панелей и наружный цвет, включая наружные фасонные элементы'],rules:['параметры раскладки, швы и высота','Настройте диапазон вертикальных зазоров между панелями, шаг фасонных элементов и способ подгонки по высоте']};
 const tabs=[...document.querySelectorAll('[data-screen]')];
 function selectScreen(tab){
   const key=tab.dataset.screen;
