@@ -43,3 +43,19 @@ tabs.forEach((tab,i)=>{
     e.preventDefault();selectScreen(tabs[index]);tabs[index].focus();
   });
 });
+
+/* Download analytics: record the EXE link, not navigation to its section. */
+document.querySelectorAll('a[download]').forEach(link=>{
+  const fileName=new URL(link.href,document.baseURI).pathname.split('/').pop();
+  const version=fileName.match(/^SandwichCreator-([\d.]+)\.exe$/i)?.[1];
+  if(!version)return;
+  link.addEventListener('click',()=>{
+    if(typeof window.ym==='function'){
+      window.ym(114266155,'reachGoal','download_exe',{
+        app_version:version,
+        language:document.documentElement.lang,
+        file_name:fileName
+      });
+    }
+  });
+});
