@@ -85,3 +85,7 @@ summary .lucide{width:20px;height:20px;color:#a091b6;transition:transform .2s}
 /* Separate the download card from the interface section above it. */
 .download-section{padding-top:64px}
 @media(max-width:700px){.download-section{padding-top:40px}}
+
+/* Release name and version lead the download card. */
+.download-copy h2{font-size:36px}
+@media(max-width:700px){.download-copy h2{font-size:30px}}
