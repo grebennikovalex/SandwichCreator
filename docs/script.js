@@ -1,27 +1,5 @@
-/* Illustration only: project geometry is calculated in the Windows application. */
-const NS='http://www.w3.org/2000/svg';
 const isEnglish=document.documentElement.lang.startsWith('en');
 const assetBase=isEnglish?'../assets/':'assets/';
-function panelLines(profile){
-  const count=profile==='1000'?9:7;
-  const front=document.querySelector('#panel-lines-front');
-  front.replaceChildren();
-  for(let i=1;i<count;i++){
-    const y=95+280*i/count;
-    const a=document.createElementNS(NS,'path');a.setAttribute('d',`M70 ${y}H530`);front.append(a);
-  }
-}
-panelLines('1190');
-document.querySelectorAll('[data-color]').forEach(button=>button.addEventListener('click',()=>{
-  document.documentElement.style.setProperty('--facade-color',button.dataset.color);
-  document.querySelectorAll('[data-color]').forEach(b=>{b.classList.toggle('selected',b===button);b.setAttribute('aria-pressed',String(b===button));});
-  document.querySelector('#ral-note').textContent=`RAL ${button.dataset.ral}`;
-}));
-document.querySelectorAll('[data-profile]').forEach(button=>button.addEventListener('click',()=>{
-  panelLines(button.dataset.profile);
-  document.querySelectorAll('[data-profile]').forEach(b=>{b.classList.toggle('selected',b===button);b.setAttribute('aria-pressed',String(b===button));});
-  document.querySelector('#profile-note').textContent=`${button.dataset.profile} ${isEnglish?'mm':'мм'}`;
-}));
 const screens=isEnglish?{
   source:['selecting source walls by ID or selection','Enter source wall IDs or use the current selection in Archicad'],
   profiles:['panel and flashing profile settings','Choose the primary and secondary profiles, flashings, and the layer for placing them'],
@@ -42,6 +20,40 @@ tabs.forEach((tab,i)=>{
     let index;if(e.key==='ArrowRight')index=(i+1)%tabs.length;else if(e.key==='ArrowLeft')index=(i-1+tabs.length)%tabs.length;else if(e.key==='Home')index=0;else if(e.key==='End')index=tabs.length-1;else return;
     e.preventDefault();selectScreen(tabs[index]);tabs[index].focus();
   });
+});
+
+
+/* Local image carousel: buttons, keyboard and numbered selectors. */
+const carouselSlides=isEnglish?[
+ ['sc_01.jpg','Panel corner connection'],
+ ['sc_02.jpg','Panel joint and flashings'],
+ ['sc_03.jpg','Source walls and finished panel layout'],
+ ['sc_04.jpg','GOST sandwich panel schedule']
+]:[
+ ['sc_01.jpg','Угловое соединение панелей'],
+ ['sc_02.jpg','Стык панелей и фасонные элементы'],
+ ['sc_03.jpg','Исходные стены и готовая раскладка'],
+ ['sc_04.jpg','Ведомость сэндвич-панелей по ГОСТ']
+];
+const carousel=document.querySelector('#project-carousel');
+const slideButtons=[...carousel.querySelectorAll('[data-slide]')];
+let activeSlide=0;
+function selectSlide(index){
+ activeSlide=(index+carouselSlides.length)%carouselSlides.length;
+ const [file,caption]=carouselSlides[activeSlide];
+ const img=document.querySelector('#carousel-image');img.src=assetBase+file;img.alt=caption;
+ document.querySelector('#carousel-caption').textContent=caption;
+ document.querySelector('#carousel-count').textContent=String(activeSlide+1).padStart(2,'0')+' / '+String(carouselSlides.length).padStart(2,'0');
+ slideButtons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===activeSlide)));
+}
+slideButtons.forEach(button=>button.addEventListener('click',()=>selectSlide(Number(button.dataset.slide))));
+document.querySelector('#carousel-prev').addEventListener('click',()=>selectSlide(activeSlide-1));
+document.querySelector('#carousel-next').addEventListener('click',()=>selectSlide(activeSlide+1));
+carousel.addEventListener('keydown',event=>{
+ if(event.key==='ArrowLeft'){event.preventDefault();selectSlide(activeSlide-1);}
+ else if(event.key==='ArrowRight'){event.preventDefault();selectSlide(activeSlide+1);}
+ else if(event.key==='Home'){event.preventDefault();selectSlide(0);}
+ else if(event.key==='End'){event.preventDefault();selectSlide(carouselSlides.length-1);}
 });
 
 /* Download analytics: record the EXE link, not navigation to its section. */
