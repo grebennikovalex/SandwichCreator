@@ -1,5 +1,6 @@
 const isEnglish=document.documentElement.lang.startsWith('en');
 const assetBase=isEnglish?'../assets/':'assets/';
+const screenImages={"source":"sc_10.jpg?v=927225c61498","profiles":"sc_11.jpg?v=c391ae9afbb8","colors":"sc_12.jpg?v=1e740abb9726","rules":"sc_13.jpg?v=4ba01e11b753"};
 const screens=isEnglish?{
   source:['selecting source walls by ID or selection','Enter source wall IDs or use the current selection in Archicad'],
   profiles:['panel and flashing profile settings','Choose the primary and secondary profiles, flashings, and the layer for placing them'],
@@ -10,7 +11,7 @@ const tabs=[...document.querySelectorAll('[data-screen]')];
 function selectScreen(tab){
   const key=tab.dataset.screen;
   tabs.forEach(t=>{t.classList.toggle('selected',t===tab);t.setAttribute('aria-selected',String(t===tab));t.tabIndex=t===tab?0:-1;});
-  const img=document.querySelector('#interface-image');img.src=`${assetBase}interface-${key}.png`;img.alt=`${isEnglish?'SandwichCreator interface':'Интерфейс SandwichCreator'}: ${screens[key][0]}`;
+  const img=document.querySelector('#interface-image');img.src=`${assetBase}${screenImages[key]}`;img.alt=`${isEnglish?'SandwichCreator interface':'Интерфейс SandwichCreator'}: ${screens[key][0]}`;
   document.querySelector('#screen-caption').textContent=screens[key][1];
   document.querySelector('#screen-panel').setAttribute('aria-labelledby',tab.id);
 }
